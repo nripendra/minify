@@ -107,7 +107,7 @@
             // btnBundle
             // 
             this.btnBundle.Enabled = false;
-            this.btnBundle.Location = new System.Drawing.Point(98, 41);
+            this.btnBundle.Location = new System.Drawing.Point(97, 42);
             this.btnBundle.Name = "btnBundle";
             this.btnBundle.Size = new System.Drawing.Size(75, 23);
             this.btnBundle.TabIndex = 5;
