@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.fileChangeWatcher = new System.IO.FileSystemWatcher();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.btnBrowse = new System.Windows.Forms.Button();
@@ -36,6 +37,7 @@
             this.txtLog = new System.Windows.Forms.TextBox();
             this.btnStart = new System.Windows.Forms.Button();
             this.btnBundle = new System.Windows.Forms.Button();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.fileChangeWatcher)).BeginInit();
             this.SuspendLayout();
             // 
@@ -101,6 +103,8 @@
             this.btnStart.Size = new System.Drawing.Size(75, 23);
             this.btnStart.TabIndex = 4;
             this.btnStart.Text = "Start";
+            this.toolTip1.SetToolTip(this.btnStart, "Start listening to changes made to file, and automatically bundle and minify any " +
+        "changes.");
             this.btnStart.UseVisualStyleBackColor = true;
             this.btnStart.Click += new System.EventHandler(this.btnStart_Click);
             // 
@@ -112,6 +116,7 @@
             this.btnBundle.Size = new System.Drawing.Size(75, 23);
             this.btnBundle.TabIndex = 5;
             this.btnBundle.Text = "Bundle";
+            this.toolTip1.SetToolTip(this.btnBundle, "Bundle/Minify now");
             this.btnBundle.UseVisualStyleBackColor = true;
             this.btnBundle.Click += new System.EventHandler(this.btnBundle_Click);
             // 
@@ -144,6 +149,7 @@
         private System.Windows.Forms.TextBox txtLog;
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnBundle;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
 

@@ -134,19 +134,21 @@ namespace Src
             {
                 btnStart.Tag = "Started";
                 btnStart.Text = "Stop";
+                toolTip1.SetToolTip(btnStart, "Stop listening to file changes.");
                 btnBundle.Enabled = false;
 
                 fileChangeWatcher.Path = config.DirectoryName;
-
+                fileChangeWatcher.EnableRaisingEvents = true;
                 Log("Started...");
             }
             else
             {
                 btnStart.Tag = "Stopped";
                 btnStart.Text = "Start";
+                toolTip1.SetToolTip(btnStart, "Start listening to changes made to file, and automatically bundle and minify any changes.");
                 btnBundle.Enabled = true;
 
-                fileChangeWatcher.Path = "";
+                fileChangeWatcher.EnableRaisingEvents = false;
 
                 Log("Stopped...");
             }
