@@ -38,6 +38,7 @@
             this.btnStart = new System.Windows.Forms.Button();
             this.btnBundle = new System.Windows.Forms.Button();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.btnClear = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.fileChangeWatcher)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,11 +89,11 @@
             this.txtLog.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtLog.Location = new System.Drawing.Point(13, 72);
+            this.txtLog.Location = new System.Drawing.Point(13, 97);
             this.txtLog.Multiline = true;
             this.txtLog.Name = "txtLog";
             this.txtLog.ReadOnly = true;
-            this.txtLog.Size = new System.Drawing.Size(366, 260);
+            this.txtLog.Size = new System.Drawing.Size(366, 235);
             this.txtLog.TabIndex = 3;
             // 
             // btnStart
@@ -120,11 +121,22 @@
             this.btnBundle.UseVisualStyleBackColor = true;
             this.btnBundle.Click += new System.EventHandler(this.btnBundle_Click);
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(304, 68);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 6;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(391, 344);
+            this.Controls.Add(this.btnClear);
             this.Controls.Add(this.btnBundle);
             this.Controls.Add(this.btnStart);
             this.Controls.Add(this.txtLog);
@@ -150,6 +162,7 @@
         private System.Windows.Forms.Button btnStart;
         private System.Windows.Forms.Button btnBundle;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 
